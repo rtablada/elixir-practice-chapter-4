@@ -7,7 +7,7 @@ defmodule Metex.Worker do
 
   def start_link(opts \\ []) do
     GenServer.start_link(__MODULE__, :ok, opts ++ [name: MW]) #2
-end
+  end
 
   def get_temperature(location) do
     GenServer.call(@name, {:location, location})
